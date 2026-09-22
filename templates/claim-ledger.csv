@@ -1,0 +1,2 @@
+claim_id,source_file,topic,claim,status,risk,evidence_needed,modern_recommendation
+CL-001,example.doc,maintenance,Replace this example with an extracted claim,Unverified,Unknown,Target platform and current primary source,Do not publish until verified

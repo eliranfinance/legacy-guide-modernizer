@@ -13,6 +13,15 @@ It was distilled from a 68-item Hebrew archive spanning PC building, Windows mai
 - converts harmful offensive material into defensive guidance
 - works in English or Hebrew and can be pasted into Claude, ChatGPT, Grok, or another assistant
 
+## Fast path
+
+1. Provide the files and state the target platform, version, audience, and desired outcome.
+2. Ask for a corpus inventory and claim ledger before asking for a polished guide.
+3. Review `Unsafe`, `Unverified`, and `Likely obsolete` items instead of silently publishing them.
+4. Request the final runbook with source filenames, current links, verification, and rollback.
+
+For repeatable work, use the templates in `templates/`.
+
 ## Install
 
 ### Claude-style skill
@@ -33,6 +42,10 @@ Paste the contents of `SKILL.md` as a project/system instruction, or use the com
 ## Design principles
 
 Current sources beat nostalgia. Reversible steps beat clever shortcuts. Observable verification beats confident wording. A useful refusal should redirect to a safe, authorized outcome.
+
+## What this is not
+
+It is not a document converter, a web scraper, a malware-analysis engine, or a guarantee that old instructions are correct. It is an instruction layer for evidence-aware transformation; the assistant still needs the files, target environment, and current sources.
 
 ## License
 

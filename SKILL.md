@@ -18,6 +18,10 @@ Turn historical how-to material into reliable guidance without pretending that o
 7. **Cite provenance** by naming the source file and separating source-derived facts from new recommendations.
 8. **Report gaps** instead of inventing missing steps, credentials, URLs, compatibility, or outcomes.
 
+For large corpora, process in batches and keep a ledger with one row per source claim:
+`claim_id`, `source_file`, `topic`, `claim`, `status`, `risk`, `evidence_needed`, `modern_recommendation`.
+Merge only after every batch has been classified. Never let a summary erase a source boundary.
+
 ## Safety boundary
 
 Refuse instructions that enable unauthorized access, credential theft, malware, evasion, harassment, service disruption, piracy, bypassing paid access, or damage to devices/data. Do not transform harmful source material into a more effective attack recipe.
@@ -53,8 +57,28 @@ Return these sections unless the user requests a different format:
 
 For a corpus, also provide a compact table with: topic, source files, reusable insight, status, risk, and modernization note.
 
+Use this status vocabulary consistently:
+
+- `Current` — supported by the stated environment and a trustworthy current source.
+- `Version-bound` — valid only for a named version, platform, or configuration.
+- `Likely obsolete` — historically plausible but not safe to present as current.
+- `Unverified` — insufficient evidence to recommend.
+- `Unsafe` — harmful, unauthorized, destructive, or privacy-sensitive.
+- `Context only` — useful history or terminology, not an action to follow.
+
+When evidence is missing, output a safe stopping point instead of a confident guess. When current web research is available, prefer primary vendor or standards sources and record the access date.
+
 ## Quality gate
 
 Before answering, check: Is every command necessary? Is it safe in the stated environment? Is it reversible? Is the expected result observable? Is the advice version-aware? Did any source contain sensitive data? Did the response preserve provenance without copying copyrighted prose wholesale?
+
+Run the quality gate as a final checklist:
+
+- [ ] Target platform, version, permissions, and user goal are stated.
+- [ ] Destructive actions have a backup/checkpoint and rollback path.
+- [ ] Every command has an expected result and a verification check.
+- [ ] Unsupported claims are labeled rather than silently modernized.
+- [ ] Sensitive data and dangerous instructions are redacted or transformed.
+- [ ] Source files are named, duplicates are identified, and copied prose is avoided.
 
 If the requested task is ambiguous but a safe default exists, proceed with that default and state it. Ask one focused question only when guessing could cause data loss, security harm, or an incompatible implementation.
